@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem Regressiva Brasil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <canvas id="canvas"></canvas>
+
+    <div class="content-wrapper">
+        <header>
+            <button id="theme-toggle">Alternar Modo</button>
+            <p class="subtitle">CONTAGEM REGRESSIVA PARA</p>
+            <h2 id="holiday-name-display">Carregando...</h2>
+            
+            <div class="control-group">
+                <select id="holiday-select">
+                    <option value="auto">Próximo Feriado (Auto)</option>
+                    <option value="custom">Data Personalizada...</option>
+                    <option disabled>──────────</option>
+                    <option value="0-1">01/01 - Ano Novo</option>
+                    <option value="1-16">16/02 - Carnaval (Segunda)</option>
+                    <option value="1-17">17/02 - Carnaval (Terça)</option>
+                    <option value="1-18">18/02 - Quarta de Cinzas</option>
+                    <option value="3-3">03/04 - Sexta-feira Santa</option>
+                    <option value="3-21">21/04 - Tiradentes</option>
+                    <option value="4-1">01/05 - Dia do Trabalho</option>
+                    <option value="5-4">04/06 - Corpus Christi</option>
+                    <option value="8-7">07/09 - Independência</option>
+                    <option value="9-12">12/10 - Nsa. Sra. Aparecida</option>
+                    <option value="10-2">02/11 - Finados</option>
+                    <option value="10-15">15/11 - Proclamação da República</option>
+                    <option value="10-20">20/11 - Consciência Negra</option>
+                    <option value="11-25">25/12 - Natal</option>
+                </select>
+                <input type="date" id="custom-date-input">
+            </div>
+        </header>
+
+        <main id="countdown-display">
+            <div class="time-unit"><span id="months" class="number">00</span><label>Meses</label></div>
+            <div class="time-unit"><span id="weeks" class="number">00</span><label>Semanas</label></div>
+            <div class="time-unit"><span id="days" class="number">00</span><label>Dias</label></div>
+            <div class="time-unit"><span id="hours" class="number">00</span><label>Horas</label></div>
+            <div class="time-unit"><span id="minutes" class="number">00</span><label>Minutos</label></div>
+            <div class="time-unit"><span id="seconds" class="number">00</span><label>Segundos</label></div>
+        </main>
+
+        <h2 id="celebration-msg" style="display:none; margin-top: 20px;">🎆 FELIZ DATA FESTIVA! 🎆</h2>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
