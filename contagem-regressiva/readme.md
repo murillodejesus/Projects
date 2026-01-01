@@ -22,4 +22,4 @@ Neste projeto, foquei em consolidar os seguintes conceitos:
 4.  **Animações CSS:** Uso de `@keyframes` disparados via JS para feedback visual nos números.
 
 ---
-**Desenvolvido com 💻 por Murillo de Jesus**
+**Desenvolvido por Murillo de Jesus 💻**
