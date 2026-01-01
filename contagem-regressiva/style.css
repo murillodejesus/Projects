@@ -113,7 +113,7 @@ input[type="date"] { display: none; color-scheme: dark; text-align: center; }
 #celebration-msg { display: none; margin: 20px 0; font-weight: 300; color: var(--accent); text-shadow: 0 0 10px var(--accent); }
 
 /* --- Media Query para Telas Maiores (Tablet/Desktop) --- */
-@media (min-width: 768px) {
+@media (min-width: 768px ),(min-height: 500px) {
     body { padding: 0; } 
 
     #theme-toggle {
