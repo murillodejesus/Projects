@@ -79,7 +79,7 @@ select, input[type="date"] {
     outline: none;
     cursor: pointer;
     width: 100%; 
-    max-width: 400px;
+    max-width: 200px;
     -webkit-appearance: none; 
     appearance: none;
 }
