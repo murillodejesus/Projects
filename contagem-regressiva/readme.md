@@ -2,6 +2,10 @@
 
 Uma aplicação de contagem regressiva moderna e dinâmica que monitora feriados brasileiros e datas personalizadas.
 
+<p align="center">
+  <img src="contagem-regressiva.jpg" alt="Contador quando chega a zero" width="100%">
+</p>
+
 ## 🌟 Principais Funções
 * **Contagem Inteligente:** Exibe o tempo restante detalhado em meses, semanas, dias, horas, minutos e segundos.
 * **Feriados Automáticos:** Detecta inteligentemente o próximo feriado nacional a partir da data atual.
