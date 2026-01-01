@@ -28,7 +28,7 @@ body {
     align-items: center;
     overflow-y: auto; 
     overflow-x: hidden;
-    padding: 20px; /
+    padding: 20px;
 }
 
 canvas { position: absolute; top: 0; left: 0; z-index: 1; pointer-events: none; }
@@ -64,6 +64,7 @@ header {
     display: flex; 
     flex-direction: column; 
     align-items: center; 
+    justify-content: center;
     gap: 15px; 
     margin-bottom: 40px;
     width: 100%; 
@@ -78,13 +79,20 @@ select, input[type="date"] {
     border-radius: 10px;
     outline: none;
     cursor: pointer;
-    width: 100%; 
-    max-width: 300px;
+    width: 100%;       
+    max-width: 350px;  
+    height: 50px;      
+    box-sizing: border-box;
     -webkit-appearance: none; 
     appearance: none;
 }
 
-input[type="date"] { display: none; color-scheme: dark; text-align: center; }
+input[type="date"] { 
+    display: none; 
+    color-scheme: dark; 
+    text-align: center; 
+    font-family: inherit;
+}
 .light-theme input[type="date"] { color-scheme: light; }
 
 
@@ -113,7 +121,7 @@ input[type="date"] { display: none; color-scheme: dark; text-align: center; }
 #celebration-msg { display: none; margin: 20px 0; font-weight: 300; color: var(--accent); text-shadow: 0 0 10px var(--accent); }
 
 /* --- Media Query para Telas Maiores (Tablet/Desktop) --- */
-@media (min-width: 768px ),(min-height: 500px) {
+@media (min-width: 768px) {
     body { padding: 0; } 
 
     #theme-toggle {
@@ -130,9 +138,15 @@ input[type="date"] { display: none; color-scheme: dark; text-align: center; }
     .subtitle { letter-spacing: 5px; }
     #holiday-name-display { font-size: 2.2rem; }
 
-    /* Para telas maiores */
-    .control-group { flex-direction: row; justify-content: center; }
-    select, input[type="date"] { width: auto; }
+    .control-group { 
+        flex-direction: row; 
+        justify-content: center; 
+    }
+    
+    select, input[type="date"] { 
+        width: auto; 
+        max-width: none; 
+    }
 
     .time-unit { padding: 25px 20px; min-width: 120px; max-width: none; flex: 0 1 auto; }
     .time-unit span { font-size: 3rem; }
