@@ -64,7 +64,6 @@ function updateTarget() {
         customInput.style.display = 'block';
         nameDisplay.innerText = "Data Personalizada";
         if (customInput.value) {
-            // T00:00:00 garante que a data seja lida corretamente no fuso local meia-noite
             targetTime = new Date(customInput.value + "T00:00:00").getTime();
             localStorage.setItem('customDate', customInput.value);
         } else {
@@ -82,7 +81,7 @@ function updateTarget() {
         targetTime = date.getTime();
         nameDisplay.innerText = found ? found.name : "Feriado Selecionado";
     }
-    // Salva a opção do dropdown no navegador
+
     localStorage.setItem('selectedHoliday', select.value);
 }
 
@@ -92,7 +91,7 @@ function updateDisplay(id, value) {
     if (el.innerText !== value) {
         el.innerText = value;
         el.classList.remove('animate-pop');
-        void el.offsetWidth; // Trigger reflow para reiniciar animação CSS
+        void el.offsetWidth; 
         el.classList.add('animate-pop');
     }
 }
