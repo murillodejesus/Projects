@@ -22,62 +22,124 @@ body {
     background: var(--bg);
     color: var(--text);
     font-family: 'Segoe UI', Roboto, sans-serif;
-    height: 100vh;
+    min-height: 100vh; 
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow-y: auto; 
+    overflow-x: hidden;
+    padding: 20px; /
 }
 
 canvas { position: absolute; top: 0; left: 0; z-index: 1; pointer-events: none; }
 
-.content-wrapper { position: relative; z-index: 10; text-align: center; width: 95%; max-width: 900px; }
+.content-wrapper { position: relative; z-index: 10; text-align: center; width: 100%; max-width: 900px; }
 
-#theme-toggle {
-    position: fixed; top: 20px; right: 20px;
-    padding: 10px 20px; border-radius: 30px; border: 1px solid var(--accent);
-    background: transparent; color: var(--accent); cursor: pointer; font-size: 0.8rem;
+/* --- Header & Botão de Tema --- */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
 }
 
-.subtitle { font-size: 0.7rem; letter-spacing: 5px; color: var(--dim); margin-bottom: 5px; }
-#holiday-name-display { font-weight: 300; margin-bottom: 25px; color: var(--text); letter-spacing: 1px; }
+#theme-toggle {
+    padding: 8px 15px; 
+    border-radius: 20px; 
+    border: 1px solid var(--accent);
+    background: transparent; 
+    color: var(--accent); 
+    cursor: pointer; 
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+    align-self: flex-end; 
+}
 
-.control-group { display: flex; flex-direction: column; align-items: center; gap: 15px; margin-bottom: 40px; }
+.subtitle { font-size: 0.7rem; letter-spacing: 3px; color: var(--dim); margin-bottom: 5px; text-transform: uppercase; }
+#holiday-name-display { font-weight: 300; font-size: 1.8rem; margin-bottom: 20px; color: var(--text); letter-spacing: 1px; }
+
+/* --- Controles (Select e Input Date) --- */
+.control-group { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 15px; 
+    margin-bottom: 40px;
+    width: 100%; 
+}
 
 select, input[type="date"] {
     background: var(--select-bg);
     color: var(--text);
     border: 2px solid var(--accent);
-    padding: 10px 20px;
+    padding: 12px 20px;
     font-size: 1rem;
     border-radius: 10px;
     outline: none;
     cursor: pointer;
+    width: 100%; 
+    max-width: 400px;
+    -webkit-appearance: none; 
+    appearance: none;
 }
 
-input[type="date"] { display: none; color-scheme: dark; }
+input[type="date"] { display: none; color-scheme: dark; text-align: center; }
 .light-theme input[type="date"] { color-scheme: light; }
 
-#countdown-display { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+
+/* --- Contador --- */
+#countdown-display { 
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+    flex-wrap: wrap; 
+    margin-bottom: 20px;
+}
 
 .time-unit { 
     background: var(--card-bg); 
-    padding: 25px 15px; 
+    padding: 20px 15px; 
     border-radius: 15px; 
-    min-width: 120px; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3); 
+    min-width: 100px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    flex: 1 1 100px; 
+    max-width: 140px; 
 }
 
-.time-unit span { display: block; font-size: 3rem; font-weight: 800; color: var(--accent); line-height: 1; }
+.time-unit span { display: block; font-size: 2.5rem; font-weight: 800; color: var(--accent); line-height: 1; }
 .time-unit label { font-size: 0.6rem; text-transform: uppercase; color: var(--dim); letter-spacing: 2px; margin-top: 10px; display: block; }
 
-#celebration-msg { display: none; margin: 30px 0; font-weight: 300; color: var(--accent); text-shadow: 0 0 10px var(--accent); }
+#celebration-msg { display: none; margin: 20px 0; font-weight: 300; color: var(--accent); text-shadow: 0 0 10px var(--accent); }
 
-/* ANIMAÇÃO DOS NÚMEROS */
-.animate-pop {
-    animation: pop 0.3s ease-out;
+/* --- Media Query para Telas Maiores (Tablet/Desktop) --- */
+@media (min-width: 768px) {
+    body { padding: 0; } 
+
+    #theme-toggle {
+        position: fixed; top: 30px; right: 30px; 
+        margin-bottom: 0;
+        align-self: auto;
+    }
+    
+    header {
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    .subtitle { letter-spacing: 5px; }
+    #holiday-name-display { font-size: 2.2rem; }
+
+    /* Para telas maiores */
+    .control-group { flex-direction: row; justify-content: center; }
+    select, input[type="date"] { width: auto; }
+
+    .time-unit { padding: 25px 20px; min-width: 120px; max-width: none; flex: 0 1 auto; }
+    .time-unit span { font-size: 3rem; }
 }
 
+/* ANIMAÇÃO DOS NÚMEROS */
+.animate-pop { animation: pop 0.3s ease-out; }
 @keyframes pop {
     0% { transform: scale(1); }
     50% { transform: scale(1.15); filter: brightness(1.5); }
