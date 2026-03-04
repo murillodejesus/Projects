@@ -4,7 +4,7 @@ firstname = input('First name:')
 lastname = input('Last name:')
 email = input('Email address:')
 phonenumber = input('Phone number:')
-jobtitle = input('ob Title:')
+jobtitle = input('Job Title:')
 idnumber = input('ID Number:')
 
 print('The ID Card is:')
