@@ -10,7 +10,7 @@ idnumber = input('ID Number:')
 print('The ID Card is:')
 print('---------------------------------------')
 
-print(f"{lastname.uper()}, {firstname.capitalize()}")
+print(f"{lastname.upper()}, {firstname.capitalize()}")
 print(f"{jobtitle.title()}")
 print(f"ID: {idnumber()}")
 print()
