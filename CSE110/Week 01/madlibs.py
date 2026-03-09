@@ -19,5 +19,11 @@ else:
 print("/n Your story is:/n")
 
 story = (
-    
+    f"The other day, I was really in trouble. It all started when I saw {article} very\n"
+    f"{adjective} {animal} {verb1} down the hallway. \"{exclamation_formatted}!\" I yelled. But all\n"
+    f"I could think to do was to {verb2} over and over. Miraculously,\n"
+    f"that caused it to stop, but not before it tried to {verb3}\n"
+    f"right in front of my family. I eventually ran to the {place} to hide!"
 )
+
+print(story)
