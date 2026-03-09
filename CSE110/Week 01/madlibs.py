@@ -10,4 +10,14 @@ place = input("a place: ")
 
 exclamation_formatted = exclamation.capitalize()
 
-firt
+first_letter = adjective[0].lower()
+if first_letter in "aeiou":
+    article = "an"
+else:
+    article = "a"
+
+print("/n Your story is:/n")
+
+story = (
+    
+)
