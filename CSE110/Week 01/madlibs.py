@@ -1,4 +1,4 @@
-print ("Please enter the following:/n")
+print ("Please enter the following:")
 
 adjective = input("adjective: ")
 animal = input("animal: ")
@@ -16,7 +16,8 @@ if first_letter in "aeiou":
 else:
     article = "a"
 
-print("/n Your story is:/n")
+print("Your story is:")
+print()
 
 story = (
     f"The other day, I was really in trouble. It all started when I saw {article} very\n"
@@ -27,3 +28,4 @@ story = (
 )
 
 print(story)
+print()
