@@ -1,10 +1,10 @@
 animal = input("What is your favorite animal? ")
-animal_lc = animal.lower()
+animal = animal.lower()
 sound = ""
 
-if animal_lc == "cat":
+if animal == "cat":
     sound ="meow"
-elif animal_lc == "dog":
+elif animal == "dog":
     sound = "ruff"
 else:
     sound = "unknown"
