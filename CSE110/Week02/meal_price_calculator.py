@@ -19,7 +19,7 @@ payment = float(input("What is the payment amount? "))
 change = payment - total_price
 print(f"Change: ${change:.2f}")
 
-# --- Resumo Final ---
+# --- Order Summary ---
 print("\n" + "="*30)
 print("       ORDER SUMMARY")
 print("="*30)
