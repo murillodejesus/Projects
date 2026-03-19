@@ -19,7 +19,13 @@ payment = float(input("What is the payment amount? "))
 change = payment - total_price
 print(f"Change: ${change:.2f}")
 
-print("\n--- Order Summary ---")
+# --- Resumo Final ---
+print("\n" + "="*30)
+print("       ORDER SUMMARY")
+print("="*30)
 total_people = childrens + adults
 print(f"Total meals served: {total_people}")
+print(f"Items: {childrens} children, {adults} adults")
+print(f"Final Amount Paid: ${payment:.2f}")
+print("="*30)
 print("Thanks for the order!")
