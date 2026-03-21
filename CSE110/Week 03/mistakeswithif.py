@@ -6,5 +6,5 @@
 
 age = input("What is your age? ")
 age_number = int(age)
-if age_number == 18:
+if age == "18":
     print("You're 18!")
