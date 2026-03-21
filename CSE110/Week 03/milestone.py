@@ -1,4 +1,4 @@
-print("Welcome to the Temple of Wonders!")
+print("Welcome to the Temple of Wonders!").
 print("You stand before three giant stone doors: RED, BLUE, and GOLD.")
 
 choice1 = input("Which door do you choose? ").lower()
