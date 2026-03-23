@@ -3,7 +3,7 @@ import random
 keep_playing = "yes"
 
 while keep_playing == "yes":
-    magic_number = random.radiant(1, 100)
+    magic_number = random.randint(1, 100)
 
     guess_count = 0
 
@@ -21,9 +21,9 @@ while keep_playing == "yes":
             print("You guessed it!")
 
     print(f"It took you {guess_count} guesses")
-    
+
     print()
 
-    keep_playing = input("Would you like to play agian (yes/no?) ")
+    keep_playing = input("Would you like to play again (yes/no)? ")
 
-print("Thank you for playing. Goodbye")
+print("Thank you for playing. Goodbye.")
