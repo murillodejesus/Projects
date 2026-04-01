@@ -1,36 +1,29 @@
 import random
 
-words = ["mosiah", "nephi", "alma", "helaman"]
-play_again = "yes"
+keep_playing = "yes"
 
-print("Welcome to the word guessing game!")
+while keep_playing == "yes":
+    magic_number = random.randint(1, 100)
 
-while play_again.lower() == "yes":
-    secret_word = random.choice(words) 
-    guess = ""
-    count = 0
-    
-    print(f"\nYour hint is: {'_ ' * len(secret_word)}")
+    guess_count = 0
 
-    while guess != secret_word:
-        guess = input("What is your guess? ").lower()
-        count += 1
+    guess = -1
 
-        if len(guess) != len(secret_word):
-            print(f"Sorry, the guess must have {len(secret_word)} letters.")
+    while guess != magic_number:
+        guess = int(input("What is your guess? "))
+        guess_count = guess_count + 1
 
-        if guess != secret_word:
-            hint = ""
-            for i in range(len(secret_word)):
-                if guess[i] == secret_word[i]:
-                    hint += guess[i].upper() + " "
-                elif guess[i] in secret_word:
-                    hint += guess[i].lower() + " "
-                else:
-                    hint += "_ "
-            print(f"Your hint is: {hint}")
+        if guess < magic_number:
+            print("Higher")
+        elif guess > magic_number:
+            print("Lower")
+        else:
+            print("You guessed it!")
 
-    print(f"Congratulations! It took you {count} guesses.")
-    play_again = input("Would you like to play again (yes/no)? ")
+    print(f"It took you {guess_count} guesses")
+
+    print()
+
+    keep_playing = input("Would you like to play again (yes/no)? ")
 
 print("Thank you for playing. Goodbye.")
