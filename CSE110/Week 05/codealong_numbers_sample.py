@@ -7,7 +7,7 @@ while number != 0:
     number = int(input("Enter number: "))
 
     if number != 0:
-        number.append(number)
+        numbers.append(number)
 
 sum = 0
 
