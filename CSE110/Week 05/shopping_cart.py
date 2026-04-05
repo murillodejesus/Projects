@@ -1,3 +1,7 @@
+#Creativity: Added a 'units' list to distinguish between kilos (kg) and individual items (un).
+#Implemented logic to calculate price based on weight (Weight * Price per Kg) 
+#Implemented .3f to show 3 decimals for weight
+
 def main():
     item_names = []
     item_prices = [] 
